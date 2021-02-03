@@ -121,14 +121,25 @@ header #nav li .sub-menu .sub-menu{
   }
   .sub-menu{
     position: relative;
-    top: 100%;
-    left: 0;
     display: none;
     background: rgba(0, 119, 255, 0.877);
     transition: 0.5s;
   }
+  header ul li a{
+    display: block;
+  }
+  #nav li{
+    display: block;
+  }
 }
-
+header #nav li .sub-menu .sub-menu{
+  position: relative;
+  left: 0;
+  top: 0;
+}
+#nav li:hover > .sub-menu {
+  display: block;
+}
 /*-----------------ScrollLINE*/
 #scrollbox {
   width: 100%;
