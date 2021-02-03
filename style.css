@@ -9,7 +9,7 @@
       background-color: aliceblue;
       height: 200vh;
   }
-
+  
   header{
     background: rgba(0, 119, 255, 0.877);
     position: fixed;
@@ -99,22 +99,22 @@ header #nav li .sub-menu .sub-menu{
 .current-menu-item{
   background: #0065d8f5;
 }
-.toggle{
-  height: 50px;
-  width: 50px;
-  background: #000;
+.toggleMenu.hiddden{
+  left: 0;
 }
+
 @media (max-width: 1200px){
   .toggleMenu{
     height: 100vh;
     position: fixed;
     width: 100%;
-    background: #acacac;
-    left: 0;
+    background: #0099ff;
+    left: -100%;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1s;
   }
   #nav{
     flex-direction: column;
@@ -131,14 +131,21 @@ header #nav li .sub-menu .sub-menu{
   #nav li{
     display: block;
   }
-}
-header #nav li .sub-menu .sub-menu{
-  position: relative;
-  left: 0;
-  top: 0;
-}
+  header .toggle{
+    height: 50px;
+    width: 50px;
+    background: #000;
+    z-index: 99999;
+  }
 #nav li:hover > .sub-menu {
   display: block;
+}
+header #nav li .sub-menu .sub-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
 }
 /*-----------------ScrollLINE*/
 #scrollbox {

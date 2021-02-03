@@ -1,5 +1,4 @@
 let images = document.querySelectorAll('.imm');
-console.log(images)
 let current = 0;
 setInterval(() => {
   for(let i=0; i<images.length;i++){
@@ -40,3 +39,7 @@ progress.style.width = progressHeight + '%'}
     header.classList.toggle('sticky', window.scrollY > 0)
 });
 /* -----------------End MunuScrol*/
+document.querySelector('.toggle').onclick = () =>{
+  document.querySelector('.toggleMenu').classList.toggle('hiddden')
+}
+
